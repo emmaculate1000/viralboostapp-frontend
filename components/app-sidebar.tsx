@@ -23,6 +23,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./ui/collapsible";
 import UserSettingsMenu from './UserSettingsMenu';
+import BusinessChannelsDropdown from "./businessChannelsDropdown";
 // Menu items.
 const items = [
   {
@@ -115,26 +116,7 @@ export default function AppSidebar() {
     <Sidebar collapsible="icon" className="v-side-bar border-r-1 border-gray-200">
        {/* sidebar header */}
        <SidebarHeader>
-          <SidebarMenu>
-          <SidebarMenuItem>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <SidebarMenuButton>
-                  Select Workspace
-                  <ChevronDown className="ml-auto" />
-                </SidebarMenuButton>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
-                <DropdownMenuItem>
-                  <span>Acme Inc</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>Acme Corp.</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </SidebarMenuItem>
-        </SidebarMenu>
+          <BusinessChannelsDropdown/>
        </SidebarHeader>
        
             {/* sidebar content */}
