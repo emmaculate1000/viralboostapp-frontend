@@ -6,9 +6,7 @@ import RegisterIMG from '@/public/registerimg.jpg';
 import Logo from '@/public/logo dark.png';
 import RegistrationForm from '@/components/forms/registration';
 import { Link } from 'lucide-react';
-import { SignUp, useUser } from '@clerk/nextjs'
 const Register = () => {
-  const { user } = useUser();
   return (
     <div className='flex justify-center h-screen max-h-screen w-full'>
         <section className='container my-auto'>

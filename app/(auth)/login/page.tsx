@@ -6,10 +6,8 @@ import RegisterIMG from '@/public/registerimg.jpg';
 import Logo from '@/public/logo dark.png';
 import LoginForm from '@/components/forms/loginForm';
 import { Link } from 'lucide-react';
-import { SignUp, useUser } from '@clerk/nextjs';
 
 const Login = () => {
-  const { user } = useUser();
   return (
     <div className='flex justify-center h-screen max-h-screen w-full px-2'>
         <section className='container my-auto w-full lg:max-w-[496px]'>
