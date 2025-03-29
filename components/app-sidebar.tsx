@@ -124,7 +124,7 @@ export default function AppSidebar() {
               <SidebarMenu className="">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={item.url===pathname?true:false} className="">
+                  <SidebarMenuButton asChild isActive={item.url===pathname?true:false} className="hover:bg-gray-200">
                     <Link href={item.url}>
                       <item.icon className={item.active||item.url===pathname?"size-20 text-primary":"size-20"}/>
                       <span className={item.active==true||item.url===pathname?"text-primary text-sm":"text-sidebar-text text-sm hover:text-sidebar-text-hover"}>{item.title}</span>
