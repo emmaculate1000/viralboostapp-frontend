@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod";
 import { Button } from "@/components/ui/button"
 import { User2Icon,MailIcon,PhoneCallIcon} from "lucide-react";
+import SubmitButton from "./submitButton";
 import {
   Form
 } from "@/components/ui/form";
@@ -74,9 +75,7 @@ const RegistrationForm=()=> {
               icon={<MailIcon className="ml-2 size-6 my-auto text-primary"
               />}
         />
-      <Button type="submit">
-        <span className="text-sm">Submit</span>
-      </Button>
+      <SubmitButton isLoading={true}>Register</SubmitButton>
     </form>
   </Form>
   )
