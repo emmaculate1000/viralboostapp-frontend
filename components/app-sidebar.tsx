@@ -1,6 +1,6 @@
 "use client"
 import { usePathname } from "next/navigation";
-
+import Logo from '@/public/logo.png';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
 import {
   Sidebar,
@@ -17,11 +17,12 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton
 } from "./ui/sidebar";
-import {ChevronUp,HomeIcon,LayoutDashboardIcon, User2,MegaphoneIcon,ChartBarIcon,SettingsIcon,Wallet2Icon,PencilIcon} from "lucide-react";
+import {ChevronUp,HomeIcon,LayoutDashboardIcon, User2,MegaphoneIcon,ChartBarIcon,SettingsIcon,Wallet2Icon,PencilIcon, ChevronDown} from "lucide-react";
 import logo from './../img/logo.png';
 import Link from "next/link";
 import Image from "next/image";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "./ui/collapsible";
+import UserSettingsMenu from './UserSettingsMenu';
 // Menu items.
 const items = [
   {
@@ -85,27 +86,27 @@ const items = [
   },
   {
     title: "Account Wallet",
-    url: "#",
+    url: "/wallet",
     active:false,
     icon:Wallet2Icon,
     subItems:[
-      {
-        title: "Add Funds",
-        url: "/add-funds", 
-      },
-      {
-        title: "Manage Transactions",
-        url: "/manage-transactions", 
-      }
+      // {
+      //   title: "Add Funds",
+      //   url: "/add-funds", 
+      // },
+      // {
+      //   title: "Manage Transactions",
+      //   url: "/manage-transactions", 
+      // }
     ]
   },
-  {
-    title: "Settings",
-    url: "/settings",
-    active:false,
-    icon:SettingsIcon,
-    subItems:[]
-  },
+  // {
+  //   title: "Settings",
+  //   url: "/settings",
+  //   active:false,
+  //   icon:SettingsIcon,
+  //   subItems:[]
+  // },
 ]
 
 export default function AppSidebar() {
@@ -113,6 +114,28 @@ export default function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="v-side-bar border-r-1 border-gray-200">
        {/* sidebar header */}
+       <SidebarHeader>
+          <SidebarMenu>
+          <SidebarMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <SidebarMenuButton>
+                  Select Workspace
+                  <ChevronDown className="ml-auto" />
+                </SidebarMenuButton>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
+                <DropdownMenuItem>
+                  <span>Acme Inc</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <span>Acme Corp.</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </SidebarMenuItem>
+        </SidebarMenu>
+       </SidebarHeader>
        
             {/* sidebar content */}
           <SidebarContent className="m-auto sidebar-content pt-1.5" >
@@ -142,7 +165,8 @@ export default function AppSidebar() {
           </SidebarContent>
           {/* Sidebar footer */}
           <SidebarFooter>
-            <SidebarMenu>
+            <UserSettingsMenu/>
+            {/* <SidebarMenu>
                 <SidebarMenuItem>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -167,7 +191,7 @@ export default function AppSidebar() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </SidebarMenuItem>
-              </SidebarMenu>
+              </SidebarMenu> */}
           </SidebarFooter>
     </Sidebar>
   )

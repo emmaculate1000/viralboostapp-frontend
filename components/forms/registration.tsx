@@ -47,8 +47,8 @@ const RegistrationForm=()=> {
     <Form {...form}>
     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
         <section className="mb-12 space-y-4">
-           <h1 className="text-2xl font-medium text-white animate-bounce">Hi There 👋</h1>
-           <p className="text-sm text-white">
+           <h1 className="text-3xl lg:text-2xl font-medium text-white animate-bounce">Hi There 👋</h1>
+           <p className="text-xl lg:text-sm text-white">
            Welcome To ViralboostApp!
            </p>
         </section>
@@ -75,7 +75,7 @@ const RegistrationForm=()=> {
               icon={<MailIcon className="ml-2 size-6 my-auto text-primary"
               />}
         />
-      <SubmitButton isLoading={true}>Register</SubmitButton>
+      <SubmitButton isLoading={true} className="w-full lg:w-1/4">Register</SubmitButton>
     </form>
   </Form>
   )

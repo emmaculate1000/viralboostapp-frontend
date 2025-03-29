@@ -29,7 +29,7 @@ const RenderField =({field,props}:{field:any,props:CustomProps})=>{
   switch (fieldType) {
     case FormFieldType.INPUT:
       return(
-        <div className='flex rounded-md border p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
+        <div className='flex rounded-md border py-2 lg:p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
           {icon && (
             icon
           )}
@@ -44,7 +44,7 @@ const RenderField =({field,props}:{field:any,props:CustomProps})=>{
       )
       case FormFieldType.EMAIL:
       return(
-        <div className='flex rounded-md border p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
+        <div className='flex rounded-md border py-2 lg:p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
           {icon && (
             icon
           )}
@@ -59,7 +59,7 @@ const RenderField =({field,props}:{field:any,props:CustomProps})=>{
       )
       case FormFieldType.PASSWORD:
       return(
-        <div className='flex rounded-md border p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
+        <div className='flex rounded-md border py-2 lg:p-1 outline-0 border-gray-400 bg-blend-darken lg:max-w-[80%]'>
           {icon && (
             icon
           )}

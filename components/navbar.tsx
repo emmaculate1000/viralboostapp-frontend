@@ -15,12 +15,11 @@ const Navbar = () => {
           </Link>
           <div className="flex items-center gap-2 lg:gap-4">
             <ThemeToggle/>
-             <Button className=''>
+             <Button className='rounded-2xl hidden'>
                <Link href='/create-campaign' className='flex items-center'>
                   <PlusIcon className="size-6 text-white"/>
                   <span className='text-base text-white'> Create Campaign</span>
                 </Link>
-            
              </Button>
           </div>
       </nav>
