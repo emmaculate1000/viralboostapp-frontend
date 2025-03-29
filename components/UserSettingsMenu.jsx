@@ -31,6 +31,7 @@ import {
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu";
+  import MoreVertIcon from '@mui/icons-material/MoreVert';
   import Image from "next/image";
   
   export default function UserSettingsMenu() {
@@ -38,12 +39,12 @@ import {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
            <div className='flex items-center py-4 border-t-2 border-t-primary gap-2 h-14 w-fit'>
-              <Image src={Pic} alt='viralboostapp user picture' width={30} height={30} className="rounded-full"/>
-              <div>
+              <Image src={Pic} alt='viralboostapp user picture' width={40} height={40} className="rounded-full"/>
+              <div className="cursor-pointer">
                 <h3 className="text-sm">Akem Ronalto Etchu</h3>
                 <button className="text-xs">etchuakem81@gmail.com</button>
               </div>
-              <ChevronUp className="size-4"/>
+              <MoreVertIcon className="size-4 cursor-pointer"/>
             </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">

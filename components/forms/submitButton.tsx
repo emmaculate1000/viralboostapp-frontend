@@ -1,6 +1,9 @@
 import React from 'react'
-import { Button } from '../ui/button'
-import { Loader } from 'lucide-react'
+import { Button } from '../ui/button';
+import Loader from '@/public/Loading_icon.gif';
+import Image from 'next/image';
+
+
 interface ButtonProps{
     isLoading:boolean,
     className?:string,
@@ -13,7 +16,7 @@ const SubmitButton = ({isLoading,className,children}:ButtonProps) => {
         {
             isLoading?(
                 <div className='flex items-center gap-4'>
-                  <Loader/>
+                  {children}
                 </div>
             ):children
         }

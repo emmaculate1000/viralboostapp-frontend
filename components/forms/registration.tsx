@@ -75,7 +75,7 @@ const RegistrationForm=()=> {
               icon={<MailIcon className="ml-2 size-6 my-auto text-primary"
               />}
         />
-      <SubmitButton isLoading={true} className="w-full lg:w-1/4">Register</SubmitButton>
+      <SubmitButton isLoading={true} className="w-full lg:w-1/4 p-7">Register</SubmitButton>
     </form>
   </Form>
   )
