@@ -142,17 +142,17 @@ export default function AppSidebar() {
               <SidebarMenu className="">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={item.url===pathname?true:false}>
+                  <SidebarMenuButton asChild isActive={item.url===pathname?true:false} className="">
                     <Link href={item.url}>
-                      <item.icon className={item.active||item.url===pathname?"size-8 text-primary":"size-8"}/>
-                      <span className={item.active==true||item.url===pathname?"text-primary":"text-accent-foreground"}>{item.title}</span>
+                      <item.icon className={item.active||item.url===pathname?"size-20 text-primary":"size-20"}/>
+                      <span className={item.active==true||item.url===pathname?"text-primary text-sm":"text-sidebar-text text-sm hover:text-sidebar-text-hover"}>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                   <SidebarMenuSub>
                     {item.subItems.map((subItem)=>(
                         <SidebarMenuSubItem key={subItem.title}>
                             <SidebarMenuSubButton isActive={subItem.url===pathname?true:false}>
-                              <Link href={subItem.url} className={subItem.url===pathname?"text-primary":"text-accent-foreground"}>
+                              <Link href={subItem.url} className={subItem.url===pathname?"text-primary text-sm":"text-sidebar-text text-sm hover:text-sidebar-text-hover"}>
                                 {subItem.title}
                               </Link>
                             </SidebarMenuSubButton>
@@ -166,32 +166,6 @@ export default function AppSidebar() {
           {/* Sidebar footer */}
           <SidebarFooter>
             <UserSettingsMenu/>
-            {/* <SidebarMenu>
-                <SidebarMenuItem>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <SidebarMenuButton>
-                      <SettingsIcon className="ml-auto sidebar-menu-text" /> Settings
-                        <ChevronUp className="ml-auto" />
-                      </SidebarMenuButton>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent
-                      side="top"
-                      className="w-[--radix-popper-anchor-width] bg-white"
-                    >
-                      <DropdownMenuItem>
-                        <span>Account</span>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <span>Billing</span>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <span>Sign out</span>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </SidebarMenuItem>
-              </SidebarMenu> */}
           </SidebarFooter>
     </Sidebar>
   )

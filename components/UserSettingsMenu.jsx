@@ -41,10 +41,10 @@ import {
            <div className='flex items-center py-4 border-t-2 border-t-primary gap-2 h-14 w-fit'>
               <Image src={Pic} alt='viralboostapp user picture' width={40} height={40} className="rounded-full"/>
               <div className="cursor-pointer">
-                <h3 className="text-sm">Akem Ronalto Etchu</h3>
-                <button className="text-xs">etchuakem81@gmail.com</button>
+                <h3 className="text-sm text-sidebar-text hover:text-sidebar-text-hover">Akem Ronalto Etchu</h3>
+                <button className="text-xs text-sidebar-text hover:text-sidebar-text-hover">etchuakem81@gmail.com</button>
               </div>
-              <MoreVertIcon className="size-4 cursor-pointer"/>
+              <MoreVertIcon className="size-4 cursor-pointer text-sidebar-text hover:text-sidebar-text-hover"/>
             </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
