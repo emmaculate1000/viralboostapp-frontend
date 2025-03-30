@@ -1,3 +1,22 @@
+import {
+  ArrowUpCircleIcon,
+  BarChartIcon,
+  CameraIcon,
+  ClipboardListIcon,
+  DatabaseIcon,
+  FileCodeIcon,
+  FileIcon,
+  FileTextIcon,
+  FolderIcon,
+  HelpCircleIcon,
+  LayoutDashboardIcon,
+  ListIcon,
+  SearchIcon,
+  SettingsIcon,
+  UsersIcon,
+  ChartBarBigIcon
+} from "lucide-react";
+
 export const GenderOptions = ["Male", "Female", "Other"];
 
 export const PatientFormDefaultValues = {
@@ -84,3 +103,168 @@ export const StatusIcon = {
   pending: "/assets/icons/pending.svg",
   cancelled: "/assets/icons/cancelled.svg",
 };
+export const navbarMenuItems={
+  user: {
+    name: "emmaculateakem",
+    email: "akemshowbiz@gmail.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  navMain: [
+    {
+      title: "Dashboard",
+      url: "/business-dashboard",
+      icon: LayoutDashboardIcon,
+    },
+    {
+      title: "Campaigns",
+      url: "/manage-campaigns",
+      icon: ListIcon,
+    },
+    {
+      title: "Business Insights",
+      url: "/business-insights",
+      icon: BarChartIcon,
+    },
+    {
+      title: "Competitor Analysis",
+      url: "/competitor-analysis",
+      icon: FolderIcon,
+    },
+    {
+      title: "Create Content",
+      url: "/create-content",
+      icon: UsersIcon,
+    },
+  ],
+  navClouds: [
+    {
+      title: "Capture",
+      icon: CameraIcon,
+      isActive: true,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Proposal",
+      icon: FileTextIcon,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Prompts",
+      icon: FileCodeIcon,
+      url: "#",
+      items: [
+        {
+          title: "Active Proposals",
+          url: "#",
+        },
+        {
+          title: "Archived",
+          url: "#",
+        },
+      ],
+    },
+  ],
+  navSecondary: [
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: SettingsIcon,
+    },
+    {
+      title: "Get Help",
+      url: "/help",
+      icon: HelpCircleIcon,
+    },
+    {
+      title: "Customer Support",
+      url: "/support",
+      icon: SearchIcon,
+    },
+  ],
+  businessChannels: [
+    {
+      name: "Create Channel",
+      url: "/create-channel",
+      icon: DatabaseIcon,
+    },
+    {
+      name: "My Channels",
+      url: "/channels",
+      icon: ClipboardListIcon,
+    },
+  ],
+}
+
+export const allRoutes=[
+  {
+    name: "Dashboard",
+    url: "/business-dashboard",
+    icon: LayoutDashboardIcon,
+  },
+  {
+    name: "Campaigns",
+    url: "/manage-campaigns",
+    icon: ListIcon,
+  },
+  {
+    name: "Business Insights",
+    url: "/business-insights",
+    icon: BarChartIcon,
+  },
+  {
+    name: "Competitor Analysis",
+    url: "/competitor-analysis",
+    icon: FolderIcon,
+  },
+  {
+    name: "Create Content",
+    url: "/create-content",
+    icon: UsersIcon,
+  },
+  {
+    name: "Settings",
+    url: "/settings",
+    icon: SettingsIcon,
+  },
+  {
+    name: "Get Help",
+    url: "/help",
+    icon: HelpCircleIcon,
+  },
+  {
+    name: "Customer Support",
+    url: "/support",
+    icon: SearchIcon,
+  },
+  {
+    name: "Create Channel",
+    url: "/create-channel",
+    icon: DatabaseIcon,
+  },
+  {
+    name: "My Channels",
+    url: "/channels",
+    icon: ClipboardListIcon,
+  },
+
+];

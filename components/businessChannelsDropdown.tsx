@@ -44,10 +44,10 @@ import {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-           <div className='flex items-center py-4 border-t-2 border-b-gray-400 gap-2 h-14 w-fit'>
+           <div className='flex items-center py-4 gap-2 h-14 w-fit'>
               <AppsIcon className="size-8"/>
               <div className="cursor-pointer">
-                <h3 className="text-sm text-sidebar-text hover:text-sidebar-text-hover">Business Channels</h3>
+                <h3 className="text-sm text-sidebar-text hover:text-sidebar-text-hover">Your Business Channels</h3>
                 <button className="text-xs text-sidebar-text hover:text-sidebar-text-hover">Customers are here!</button>
               </div>
               <MoreVertIcon className="size-4 cursor-pointer text-sidebar-text hover:text-sidebar-text-hover"/>

@@ -1,21 +1,24 @@
-import { Sidebar } from 'lucide-react'
-import React, { Children } from 'react'
-import Navbar from '@/components/navbar';
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import AppSidebar from '@/components/app-sidebar';
+import { AppSidebar } from "@/components/app-sidebar"
+import { ChartAreaInteractive } from "@/components/chart-area-interactive"
+import { DataTable } from "@/components/data-table"
+import { SectionCards } from "@/components/section-cards"
+import { SiteHeader } from "@/components/site-header"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
+
+import data from "./data.json"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <AppSidebar/>
-      <main className='w-full px-2 overflow-hidden'>
-        <div className='flex w-full gap-1 items-center px-2  md:px-2 lg:px-4 border-b-1 border-b-gray-400'>
-          <SidebarTrigger className='mx-0'/>
-          <Navbar/>
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            {children}
+          </div>
         </div>
-        
-        {children}
-      </main>
+      </SidebarInset>
     </SidebarProvider>
   )
 }
