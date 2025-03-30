@@ -41,6 +41,8 @@
   --foreground: oklch(0.145 0 0);
   --sidebar-text:oklch(0.551 0.027 264.364);
   --sidebar-text-hover:oklch(0.21 0.034 264.665);
+  --color-desktop:#E66313;
+  --color-mobile:oklch(0.381 0.176 304.987);
 }
 
 .dark {
@@ -78,6 +80,8 @@
   --sidebar-ring: oklch(0.556 0 0);
   --sidebar-text:#fff;
   --sidebar-text-hover:#fff;
+  --color-desktop:#E66313;
+  --color-mobile:oklch(0.381 0.176 304.987);
 }
 
 @theme inline {
@@ -118,6 +122,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-text: var(--sidebar-text);
   --color-sidebar-text-hover: var(--sidebar-text-hover);
+  --color-desktop:var(--color-desktop);
+  --color-mobile:var(--color-mobile);
 }
 
 /* =====  REACT-DATEPICKER OVERRIDES */
