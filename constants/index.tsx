@@ -121,8 +121,8 @@ export const navbarMenuItems={
       icon: ListIcon,
     },
     {
-      title: "Business Insights",
-      url: "/business-insights",
+      title: "Business Performance",
+      url: "/business-performance",
       icon: BarChartIcon,
     },
     {
@@ -222,13 +222,13 @@ export const allRoutes=[
     icon: LayoutDashboardIcon,
   },
   {
-    name: "Campaigns",
+    name: "Manage Campaigns",
     url: "/manage-campaigns",
     icon: ListIcon,
   },
   {
-    name: "Business Insights",
-    url: "/business-insights",
+    name: "Business Performance",
+    url: "/business-performance",
     icon: BarChartIcon,
   },
   {
@@ -264,6 +264,11 @@ export const allRoutes=[
   {
     name: "My Channels",
     url: "/channels",
+    icon: ClipboardListIcon,
+  },
+  {
+    name: "Edit Campaign",
+    url: "/manage-campaigns/edit-campaign",
     icon: ClipboardListIcon,
   },
 
