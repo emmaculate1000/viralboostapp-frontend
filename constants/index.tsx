@@ -268,7 +268,7 @@ export const allRoutes=[
   },
   {
     name: "Edit Campaign",
-    url: "/manage-campaigns/edit-campaign",
+    url: "/edit-campaign",
     icon: ClipboardListIcon,
   },
 
