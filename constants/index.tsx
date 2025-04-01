@@ -253,8 +253,8 @@ export const allRoutes=[
     icon: ListIcon,
   },
   {
-    name: "Business Performance",
-    url: "/business-performance",
+    name: "Business Analytics",
+    url: "/analytics",
     icon: BarChartIcon,
   },
   {
