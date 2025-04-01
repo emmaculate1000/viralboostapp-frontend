@@ -120,13 +120,13 @@ export const navbarMenuItems={
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Campaigns",
+      title: "Manage Campaigns",
       url: "/manage-campaigns",
       icon: ListIcon,
     },
     {
-      title: "Business Performance",
-      url: "/business-performance",
+      title: "Analytics",
+      url: "/analytics",
       icon: BarChartIcon,
     },
     {
@@ -135,7 +135,7 @@ export const navbarMenuItems={
       icon: FolderIcon,
     },
     {
-      title: "Influencers",
+      title: "Influencer Marketplace",
       url: "/influencers",
       icon: UsersIcon,
     },
