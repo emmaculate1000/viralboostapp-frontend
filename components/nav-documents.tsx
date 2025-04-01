@@ -5,7 +5,12 @@ import {
   MoreHorizontalIcon,
   ShareIcon,
   type LucideIcon,
-} from "lucide-react"
+} from "lucide-react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+
 
 import {
   DropdownMenu,
@@ -26,24 +31,26 @@ import {
 
 export function NavDocuments({
   items,
+  heading
 }: {
   items: {
     name: string
     url: string
-    icon: LucideIcon
-  }[]
+    icon: React.ReactNode
+  }[],
+  heading:string
 }) {
   const { isMobile } = useSidebar()
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Business Channels</SidebarGroupLabel>
+      <SidebarGroupLabel>{heading}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.name}>
               <SidebarMenuButton asChild>
               <Link href={item.url}>
-                <item.icon />
+                {item.icon}
                 <span>{item.name}</span>
               </Link>
               </SidebarMenuButton>

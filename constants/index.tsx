@@ -14,8 +14,12 @@ import {
   SearchIcon,
   SettingsIcon,
   UsersIcon,
-  ChartBarBigIcon
+  ChartBarBigIcon,
 } from "lucide-react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 export const GenderOptions = ["Male", "Female", "Other"];
 
@@ -131,8 +135,8 @@ export const navbarMenuItems={
       icon: FolderIcon,
     },
     {
-      title: "Create Content",
-      url: "/create-content",
+      title: "Influencers",
+      url: "/influencers",
       icon: UsersIcon,
     },
   ],
@@ -201,16 +205,38 @@ export const navbarMenuItems={
       icon: SearchIcon,
     },
   ],
+  contentCreation: [
+    {
+      name: "Youtube Video",
+      url: "/create-channel",
+      icon: <YouTubeIcon/>,
+    },
+    {
+      name: "Facebook Posts",
+      url: "/channels",
+      icon: <FacebookIcon/>,
+    },
+    {
+      name: "Instagram Post",
+      url: "/channels",
+      icon: <InstagramIcon/>,
+    },
+    {
+      name: "Tiktok Video",
+      url: "/channels",
+      icon: <ClipboardListIcon/>,
+    },
+  ],
   businessChannels: [
     {
       name: "Create Channel",
       url: "/create-channel",
-      icon: DatabaseIcon,
+      icon: <DatabaseIcon/>,
     },
     {
       name: "My Channels",
       url: "/channels",
-      icon: ClipboardListIcon,
+      icon: <ClipboardListIcon/>,
     },
   ],
 }
