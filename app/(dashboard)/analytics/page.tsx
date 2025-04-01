@@ -93,14 +93,10 @@ export default function Analytics() {
                   <Link href="#">Analytics</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Edit Product</BreadcrumbPage>
-              </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <main className="grid flex-1 items-start gap-2 p-1 sm:px-3 sm:py-0 md:gap-3">
+        <main className="grid flex-1 border-t-1 border-gray-300 items-start gap-2 sm:px-3 sm:py-0 md:gap-3">
           <BusinessAnalytics/>
         </main>
       </div>

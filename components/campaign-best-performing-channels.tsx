@@ -31,19 +31,19 @@ const chartConfig = {
     label: "Visitors",
   },
   chrome: {
-    label: "Chrome",
+    label: "Youtube",
     color: "#E66313",
   },
   safari: {
-    label: "Safari",
+    label: "Facebook",
     color: "#3b82f6",
   },
   firefox: {
-    label: "Firefox",
+    label: "Instagram",
     color: "#22c55e",
   },
   edge: {
-    label: "Edge",
+    label: "LinkedIn",
     color: "#facc15",
   },
   other: {
@@ -60,7 +60,7 @@ export default function BestPerformingCampaignChannels() {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Channels Performance</CardTitle>
+        <CardTitle>Adience Engagement By Channels</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
