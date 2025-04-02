@@ -390,3 +390,36 @@ export const allRoutes=[
   },
 
 ];
+export const KPIs =[
+  {
+    KPITitle:"Total Reach",
+    KPIAmount:'20,000 People',
+    KPIGrowthRate:-10,
+    KPIName:"Total Reach For Past 6 Months",
+  },
+  {
+    KPITitle:"Engagement Rate",
+    KPIAmount:'7000',
+    KPIGrowthRate:80,
+    KPIName:"Engagement Rate For Past 6 Months",
+  },
+  {
+    KPITitle:"Conversion Rate",
+    KPIAmount:'20%',
+    KPIGrowthRate:8,
+    KPIName:"Conversion Rate For Past 6 Months",
+  },
+  // {
+  //   KPITitle:"ROI (Return on Investment)",
+  //   KPIAmount:'$20,000',
+  //   KPIGrowthRate:8,
+  //   KPIName:"ROI (Return on Investment) For Past 6 Months"
+  // },
+  {
+    KPITitle:"Ad Spend vs. ROI (Return on Investment)",
+    KPIAmount:'$10,000 = $30,000',
+    KPIGrowthRate:8,
+    KPIName:"Ad Spend vs. Revenue For Past 6 Months",
+    KPIUnit:'$'
+  }
+];

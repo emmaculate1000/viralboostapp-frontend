@@ -71,9 +71,8 @@ import {
 } from "@/components/ui/tooltip"
 import BusinessAnalytics from '@/components/business-analytics';
 import IMG from '@/public/pic.jpg'
-
-// export const description =
-//   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
+import { SectionCards } from '@/components/section-cards'
+import AnalyticsOverview from "@/components/analytics-overview"
 
 export default function Overview() {
   return (
@@ -101,8 +100,8 @@ export default function Overview() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <main className="grid border-t-1 border-t-gray-300 flex-1 items-start gap-2 sm:px-6 sm:py-0 md:gap-3">
-          <BusinessAnalytics/>
+        <main className="grid py-2 border-t-1 border-t-gray-300 flex-1 items-start gap-2 sm:px-6 sm:py-2 md:gap-3">
+          <AnalyticsOverview/>
         </main>
       </div>
   )

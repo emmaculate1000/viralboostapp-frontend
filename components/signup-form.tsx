@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -8,11 +10,13 @@ import RegisterIMG from '@/public/registerimg.jpg';
 import LogoWhite from '@/public/logo.png';
 import LogoDark from '@/public/logo dark.png';
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export function SignupForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const { theme, setTheme } = useTheme();
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden">
@@ -20,8 +24,8 @@ export function SignupForm({
           <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <Link href="/register" className='flex items-center gap-2'>
-                    <Image src={LogoWhite} alt='viralboostapp logo' width={40} height={40} className="lg:w-[50px] lg:h-[50px]"/>
+                <Link href="/login" className='flex my-1 items-center gap-2'>
+                   {theme === "light"?(<Image src={LogoWhite} alt='viralboostapp logo' width={40} height={40} className="lg:w-[50px] lg:h-[50px]"/>):(<Image src={LogoDark} alt='viralboostapp logo' width={40} height={40} className="lg:w-[50px] lg:h-[50px]"/>)}
                     <h1 className='text-2xl font-bold'>Viralboost<span className='text-primary'>App</span></h1>
                 </Link>
                 {/* <h1 className="text-2xl font-bold">Welcome To ViralboostApp</h1> */}

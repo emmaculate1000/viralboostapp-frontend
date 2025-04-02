@@ -14,13 +14,15 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import LogoWhite from '@/public/logo.png';
-import LogoDark from '@/public/logo dark.png';
 import Image from "next/image";
 import Link from "next/link";
 import { navbarMenuItems,allRoutes } from "@/constants";
+import { useTheme } from "next-themes";
+import LogoWhite from '@/public/logo.png';
+import LogoDark from '@/public/logo dark.png';
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { theme, setTheme } = useTheme();
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -30,8 +32,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <Link href="/dashboard" className='flex items-center gap-2'>
-                 <Image src={LogoWhite} alt='viralboostapp logo' width={40} height={40}/>
+              <Link href="/business-dashboard" className='flex items-center gap-2'>
+                 {theme === "light"?(<Image src={LogoWhite} alt='viralboostapp logo' width={40} height={40}/>):(<Image src={LogoDark} alt='viralboostapp logo' width={40} height={40}/>)}
                  <h1 className='text-xl font-bold'>Viralboost<span className='text-primary'>App</span></h1>
               </Link>
               {/* <a href="#">
