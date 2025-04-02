@@ -14,7 +14,7 @@ import ChannelAudienceGrowth from "./channel-audience-growth";
 
 export default function BisinessAnalytics() {
   return (
-   <div className="lg:px-6">
+   <div>
       <div className="*:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-4 grid grid-cols-1 gap-4 px-4 my-2 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card">
         <CampaignTrends/>
         <BestPerformingCampaignChannels/>

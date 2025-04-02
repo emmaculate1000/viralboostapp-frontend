@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 import { allRoutes } from "@/constants";
 
 const RouteDetector=(props)=>{
-  //const currentRoute=allRoutes.filter((route)=>route.url===path);
-  const currentRoute=allRoutes.find((item)=>item.url===props.path);
+  //const currentRoute=allRoutes.filter((route)=>route.url===path);item.url===props.path
+  const currentRoute=allRoutes.find((item)=>item.items?(item.items.find((subItem)=>subItem.url===props.path)):item.url===props.path);
   return(
     <h1 className="text-base font-medium capitalize">{currentRoute?.name}</h1>
   )

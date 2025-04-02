@@ -121,22 +121,67 @@ export const navbarMenuItems={
     },
     {
       title: "Manage Campaigns",
-      url: "/manage-campaigns",
+      url: "",
       icon: ListIcon,
+      items:[
+        {
+          title: "Create Campaign",
+          url:  "/business-dashboard/manage-campaigns/create-campaign",
+        },
+        {
+          title: "Active Campaigns",
+          url:  "/business-dashboard/manage-campaigns/active-campaigns",
+        },
+        {
+          title: "Pending Campaigns",
+          url:  "/business-dashboard/manage-campaigns/pending-campaigns",
+        },
+        {
+          title: "Archived Campaigns",
+          url:  "/business-dashboard/manage-campaigns/archived-campaigns",
+        },
+      ]
     },
     {
       title: "Analytics",
-      url: "/analytics",
+      url: "#",
       icon: BarChartIcon,
+      items:[
+        {
+          title: "Overview",
+          url: "/business-dashboard/analytics/overview",
+        },
+        {
+          title: "Audience Insights",
+          url: "/business-dashboard/analytics/audience-insights",
+        },
+        {
+          title: "Campaign Performance",
+          url: "/business-dashboard/analytics/campaign-performance",
+        },
+        {
+          title: "Competitor Analysis",
+          url: "/business-dashboard/analytics/competitor-analysis",
+        },
+        {
+          title: "Influencer Performance",
+          url: "/business-dashboard/analytics/influencer-performance",
+        },
+        {
+          title: "Growth & Forecasting",
+          url: "/business-dashboard/analytics/growth-and-forecasting",
+        },
+  
+      ]
     },
     {
       title: "Competitor Analysis",
-      url: "/competitor-analysis",
+      url: "/business-dashboard/competitor-analysis",
       icon: FolderIcon,
     },
     {
       title: "Influencer Marketplace",
-      url: "/influencers",
+      url: "/business-dashboard/influencers",
       icon: UsersIcon,
     },
   ],
@@ -191,51 +236,51 @@ export const navbarMenuItems={
   navSecondary: [
     {
       title: "Settings",
-      url: "/settings",
+      url: "/business-dashboard/settings",
       icon: SettingsIcon,
     },
     {
       title: "Get Help",
-      url: "/help",
+      url: "/business-dashboard/help",
       icon: HelpCircleIcon,
     },
     {
       title: "Customer Support",
-      url: "/support",
+      url: "/business-dashboard/support",
       icon: SearchIcon,
     },
   ],
   contentCreation: [
     {
       name: "Youtube Video",
-      url: "/create-channel",
+      url: "/business-dashboard/youtube-video",
       icon: <YouTubeIcon/>,
     },
     {
       name: "Facebook Posts",
-      url: "/channels",
+      url: "/business-dashboard/facebook-post",
       icon: <FacebookIcon/>,
     },
     {
       name: "Instagram Post",
-      url: "/channels",
+      url: "/business-dashboard/instagram-post",
       icon: <InstagramIcon/>,
     },
     {
       name: "Tiktok Video",
-      url: "/channels",
+      url: "business-dashboard/tiktok-video",
       icon: <ClipboardListIcon/>,
     },
   ],
   businessChannels: [
     {
       name: "Create Channel",
-      url: "/create-channel",
+      url: "/business-dashboard/create-channel",
       icon: <DatabaseIcon/>,
     },
     {
       name: "My Channels",
-      url: "/channels",
+      url: "/business-dashboard/channels",
       icon: <ClipboardListIcon/>,
     },
   ],
@@ -249,53 +294,99 @@ export const allRoutes=[
   },
   {
     name: "Manage Campaigns",
-    url: "/manage-campaigns",
-    icon: ListIcon,
+    url: "/business-dashboard/manage-campaigns",
+    icon: LayoutDashboardIcon,
   },
   {
-    name: "Business Analytics",
-    url: "/analytics",
-    icon: BarChartIcon,
+    name: "Create Campaign",
+    url: "/business-dashboard/manage-campaigns/create-campaign",
+    icon: LayoutDashboardIcon,
+  },
+  {
+    name: "Overview",
+    url: "/business-dashboard/analytics/overview",
+  },
+  {
+    name: "Audience Insights",
+    url: "/business-dashboard/analytics/audience-insights",
+  },
+  {
+    name: "Campaign Performance",
+    url: "/business-dashboard/analytics/campaign-performance",
   },
   {
     name: "Competitor Analysis",
-    url: "/competitor-analysis",
+    url: "/business-dashboard/analytics/competitor-analysis",
+  },
+  {
+    name: "Influencer Performance",
+    url: "/business-dashboard/analytics/influencer-performance",
+  },
+  {
+    name: "Growth & Forecasting",
+    url: "/business-dashboard/analytics/growth-and-forecasting",
+  },
+
+  {
+    name: "Campaigns",
+    url: "/business-dashboard/manage-campaigns",
+    icon: ListIcon,
+  },
+  {
+    name: "Competitor Analysis",
+    url: "/business-dashboard/competitor-analysis",
     icon: FolderIcon,
   },
   {
     name: "Create Content",
-    url: "/create-content",
+    url: "/business-dashboard/create-content",
     icon: UsersIcon,
   },
   {
     name: "Settings",
-    url: "/settings",
+    url: "/business-dashboard/settings",
     icon: SettingsIcon,
   },
   {
     name: "Get Help",
-    url: "/help",
+    url: "/business-dashboard/help",
     icon: HelpCircleIcon,
   },
   {
     name: "Customer Support",
-    url: "/support",
+    url: "/business-dashboard/support",
     icon: SearchIcon,
   },
   {
     name: "Create Channel",
-    url: "/create-channel",
+    url: "/business-dashboard/create-channel",
     icon: DatabaseIcon,
   },
   {
     name: "My Channels",
-    url: "/channels",
+    url: "/business-dashboard/channels",
     icon: ClipboardListIcon,
   },
   {
     name: "Edit Campaign",
-    url: "/manage-campaigns/edit-campaign",
+    url: "/business-dashboard/manage-campaigns/edit-campaign",
     icon: ClipboardListIcon,
+  },
+  {
+    name: "Create Campaign",
+    url:  "/business-dashboard/manage-campaigns/create-campaign",
+  },
+  {
+    name: "Active Campaigns",
+    url:  "/business-dashboard/manage-campaigns/active-campaigns",
+  },
+  {
+    name: "Pending Campaigns",
+    url:  "/business-dashboard/manage-campaigns/pending-campaigns",
+  },
+  {
+    name: "Archived Campaigns",
+    url:  "/business-dashboard/manage-campaigns/archived-campaigns",
   },
 
 ];

@@ -45,7 +45,7 @@ export default function CampaignTrends() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Campaign Trends</CardTitle>
+        <CardTitle>Campaign Performance</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
