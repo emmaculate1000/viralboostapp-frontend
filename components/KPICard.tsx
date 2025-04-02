@@ -27,11 +27,11 @@ export function KPICard({KPIs}:{KPIs:{
           </CardTitle>
           <div className="absolute right-4 top-4">
           {kpi.KPIGrowthRate>0?(
-            <Badge variant="outline" className="flex gap-1 rounded-lg text-xs">
+            <Badge variant="outline" className="flex gap-1 rounded-lg text-xs animate-bounce">
             <TrendingUpIcon className="size-3" />
             +{kpi.KPIGrowthRate}%
           </Badge>
-          ):(<Badge variant="outline" className="flex gap-1 rounded-lg text-xs">
+          ):(<Badge variant="outline" className="flex gap-1 rounded-lg text-xs animate-bounce">
             <TrendingDownIcon className="size-3" />
             -{kpi.KPIGrowthRate}%
           </Badge>)}
@@ -46,7 +46,7 @@ export function KPICard({KPIs}:{KPIs:{
           </div>
           <div className="w-full text-muted-foreground gap-2 flex items-center justify-between">
             <div>{kpi.KPIName}</div>
-            <div className="right-1">{kpi.KPIGrowthRate<0?(<Button>Action</Button>):null}</div>
+            <div className="right-1">{kpi.KPIGrowthRate<0?(<Button className="animate-pulse">Action</Button>):null}</div>
           </div>
         </CardFooter>
       </Card>
