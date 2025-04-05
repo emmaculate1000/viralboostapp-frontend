@@ -1,4 +1,5 @@
 import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 import { Badge } from "@/components/ui/badge"
 import {
@@ -9,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "./ui/button"
+import Link from "next/link";
 
 export function KPICard({KPIs}:{KPIs:{
     KPITitle:string,
@@ -22,7 +24,7 @@ export function KPICard({KPIs}:{KPIs:{
         <Card className="@container/card">
         <CardHeader className="relative">
           <CardDescription>{kpi.KPITitle}</CardDescription>
-          <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
+          <CardTitle className="@[250px]/card:text-xl text-xl font-semibold tabular-nums">
             {kpi.KPIAmount}
           </CardTitle>
           <div className="absolute right-4 top-4">
@@ -33,7 +35,7 @@ export function KPICard({KPIs}:{KPIs:{
           </Badge>
           ):(<Badge variant="outline" className="flex gap-1 rounded-lg text-xs animate-bounce">
             <TrendingDownIcon className="size-3" />
-            -{kpi.KPIGrowthRate}%
+            {kpi.KPIGrowthRate}%
           </Badge>)}
           </div>
         </CardHeader>
@@ -46,7 +48,11 @@ export function KPICard({KPIs}:{KPIs:{
           </div>
           <div className="w-full text-muted-foreground gap-2 flex items-center justify-between">
             <div>{kpi.KPIName}</div>
-            <div className="right-1">{kpi.KPIGrowthRate<0?(<Button className="animate-pulse">Action</Button>):null}</div>
+            <div className="right-1">{kpi.KPIGrowthRate<0?(
+              <Link href="/business-dashboard/analytics/overview/ai-content-optimization">
+                <Button className="animate-pulse cursor-pointer"><AutoFixHighIcon className="size-5"/></Button>
+              </Link>
+            ):null}</div>
           </div>
         </CardFooter>
       </Card>

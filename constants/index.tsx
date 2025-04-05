@@ -388,6 +388,10 @@ export const allRoutes=[
     name: "Archived Campaigns",
     url:  "/business-dashboard/manage-campaigns/archived-campaigns",
   },
+  {
+    name: "AI Content Optimization",
+    url:  "/business-dashboard/ai-content-optimization",
+  },
 
 ];
 export const KPIs =[
@@ -399,7 +403,7 @@ export const KPIs =[
   },
   {
     KPITitle:"Engagement Rate",
-    KPIAmount:'7000',
+    KPIAmount:'70%',
     KPIGrowthRate:80,
     KPIName:"Engagement Rate For Past 6 Months",
   },
@@ -417,7 +421,7 @@ export const KPIs =[
   // },
   {
     KPITitle:"Ad Spend vs. ROI (Return on Investment)",
-    KPIAmount:'$10,000 = $30,000',
+    KPIAmount:'$10,000:$30,000',
     KPIGrowthRate:8,
     KPIName:"Ad Spend vs. Revenue For Past 6 Months",
     KPIUnit:'$'
