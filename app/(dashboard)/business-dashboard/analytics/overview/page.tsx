@@ -74,6 +74,7 @@ import IMG from '@/public/pic.jpg'
 import { SectionCards } from '@/components/section-cards'
 import AnalyticsOverview from "@/components/analytics-overview"
 
+
 export default function Overview() {
   return (
     <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-2">

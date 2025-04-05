@@ -49,7 +49,7 @@ export function KPICard({KPIs}:{KPIs:{
           <div className="w-full text-muted-foreground gap-2 flex items-center justify-between">
             <div>{kpi.KPIName}</div>
             <div className="right-1">{kpi.KPIGrowthRate<0?(
-              <Link href="/business-dashboard/analytics/overview/ai-content-optimization">
+              <Link href="/business-dashboard/ai-content-optimization">
                 <Button className="animate-pulse cursor-pointer"><AutoFixHighIcon className="size-5"/></Button>
               </Link>
             ):null}</div>
