@@ -15,7 +15,6 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/components/ui/badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -25,14 +24,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -69,17 +60,18 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import BusinessAnalytics from '@/components/business-analytics';
 import IMG from '@/public/pic.jpg'
+import CreateCampaignForm from "@/components/create-campaign-form"
 
 // export const description =
 //   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
 
-export default function CreateCampaigns() {
+export default function EditCampaign() {
   return (
     <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-2">
-        <header className="hidden md:flex sticky top-0 z-30 h-14 items-center gap-4 bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-          <Breadcrumb className="md:flex">
+        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+          
+          <Breadcrumb className="hidden md:flex">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
@@ -89,20 +81,18 @@ export default function CreateCampaigns() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/business-dashboard/manage-campaigns/">Manage Campaigns</Link>
+                  <Link href="/business-dashboard/manage-campaigns">Manage Campaigns</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/business-dashboard/manage-campaigns/create-campaign">Create Campaign</Link>
-                </BreadcrumbLink>
+                <BreadcrumbPage>Create Campaign</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <main className="grid border-t-1 border-t-gray-300 flex-1 items-start gap-2 sm:px-6 sm:py-0 md:gap-3">
-          <BusinessAnalytics/>
+        <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+         <CreateCampaignForm/>
         </main>
       </div>
   )

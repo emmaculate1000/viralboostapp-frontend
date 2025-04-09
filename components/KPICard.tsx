@@ -1,6 +1,4 @@
 import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
-import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -11,6 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from "./ui/button"
 import Link from "next/link";
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 export function KPICard({KPIs}:{KPIs:{
     KPITitle:string,

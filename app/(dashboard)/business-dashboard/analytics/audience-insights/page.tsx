@@ -69,13 +69,13 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import BusinessAnalytics from '@/components/business-analytics';
 import IMG from '@/public/pic.jpg'
+import AudienceInsights from "@/components/audience-insights"
 
 // export const description =
 //   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
 
-export default function AudienceInsights() {
+export default function AudienceInsightsAnalytics() {
   return (
     <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-2">
         <header className="hidden md:flex sticky top-0 z-30 h-14 items-center gap-4 bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
@@ -102,7 +102,7 @@ export default function AudienceInsights() {
           </Breadcrumb>
         </header>
         <main className="grid border-t-1 border-t-gray-300 flex-1 items-start gap-2 sm:px-6 sm:py-0 md:gap-3">
-          <BusinessAnalytics/>
+          <AudienceInsights/>
         </main>
       </div>
   )
