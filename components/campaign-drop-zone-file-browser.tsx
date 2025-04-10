@@ -14,6 +14,7 @@ const img = {
 };
 export function DropzoneFileBrowser(props) {
   const [files, setFiles] = useState([]);
+  const [isVideo,setIsVideo]=useState(true);
   const [videoURL,setVideoURL]=useState("https://www.youtube.com/watch?v=Z4mSBypzQsI");
   const {getRootProps, getInputProps, acceptedFiles,
     fileRejections,} = useDropzone({
@@ -86,7 +87,7 @@ useEffect(() => {
 
 
   return (
-    <div className="container">
+    <div className="container items-center">
       {files.length==0?( <div {...getRootProps({className: 'dropzone'})} className='border-2 border-dashed border-gray-400 py-4 px-4 text-center'>
         <input {...getInputProps()} />
         <p className='my-4'>Drag 'n' drop some file(s) here, or click to select files</p>
@@ -99,10 +100,8 @@ useEffect(() => {
         </aside>
        
       </div>):(
-        media=='video'?(
-         <div className='mx-auto'>
-           <VideoPlayer url={videoURL}/>
-         </div>
+        isVideo?(
+          <VideoPlayer url={videoURL}/>
         ):(
           <div className='max-h-75'>
             <ScrollArea className="border-1 max-h-80 whitespace-nowrap rounded-md">

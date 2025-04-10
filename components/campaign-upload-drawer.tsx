@@ -82,7 +82,7 @@ export function CampaignUploadDrawer(props) {
             <Button variant="outline">Cancel</Button>
           </DrawerClose>
         </div>
-        <div className="mx-auto w-full max-w-sm">
+        <div className="mx-auto w-full sm:max-w-[70%]">
           <div className="px-4 py-1 pb-0">
             
             <div className="mt-3 h-[700px]">
