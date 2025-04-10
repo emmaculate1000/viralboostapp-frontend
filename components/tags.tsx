@@ -34,6 +34,7 @@ export default function Tags() {
         justifyContent: 'center',
         flexWrap: 'wrap',
         listStyle: 'none',
+        background:'none',
         p: 0.5,
         m: 0,
       }}
@@ -52,6 +53,7 @@ export default function Tags() {
               icon={icon}
               label={data.label}
               onDelete={data.label === 'React' ? undefined : handleDelete(data)}
+              style={{background:'#eee'}}
             />
           </ListItem>
         );

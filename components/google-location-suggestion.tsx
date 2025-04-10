@@ -21,7 +21,7 @@ import {
 export function GoogleLocationSugession() {
   return (
     <Command className="rounded-lg border shadow-md md:min-w-[450px]">
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder="Type location or search..." className="py-4"/>
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
@@ -38,24 +38,7 @@ export function GoogleLocationSugession() {
             <span>Calculator</span>
           </CommandItem>
         </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>
-            <User />
-            <span>Profile</span>
-            <CommandShortcut>⌘P</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <CreditCard />
-            <span>Billing</span>
-            <CommandShortcut>⌘B</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <Settings />
-            <span>Settings</span>
-            <CommandShortcut>⌘S</CommandShortcut>
-          </CommandItem>
-        </CommandGroup>
+        
       </CommandList>
     </Command>
   )

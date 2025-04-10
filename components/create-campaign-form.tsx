@@ -1,19 +1,15 @@
 import React from 'react';
 import Image from "next/image"
-import Link from "next/link"
+import Link from "next/link";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { CampaignImagePreview } from './campaign-image-preview';
+
+
 import {
   ChevronLeft,
-  Home,
-  LineChart,
-  Package,
-  Package2,
-  PanelLeft,
   PlusCircle,
-  Search,
-  Settings,
-  ShoppingCart,
   Upload,
-  Users2,
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import {
@@ -36,15 +32,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { GoogleLocationSugession } from '@/components/google-location-suggestion';
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/components/ui/toggle-group"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Tags from '@/components/tags';
 import IMG from '@/public/pic.jpg'
+import { campaignFormat } from '@/constants';
+import { CampaignUploadDrawer } from './campaign-upload-drawer';
+import { CampaignBudgetSetter } from './campaign-budget-setter';
 
 const CreateCampaignForm = () => {
   return (
@@ -71,6 +66,40 @@ const CreateCampaignForm = () => {
         </div>
         <div className="grid gap-4 md:grid-cols-[1fr_250px] lg:grid-cols-3 lg:gap-8">
         <div className="grid auto-rows-max items-start gap-4 lg:col-span-2 lg:gap-8">
+        <Card x-chunk="dashboard-07-chunk-3">
+            <CardHeader>
+                <CardTitle>Campaign Goal</CardTitle>
+                <CardDescription>
+                 What Is The Goal Of Your Campaign
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <div className="grid gap-6">
+                    <div className="grid gap-3">
+                        <Label htmlFor="platform">Select Goal</Label>
+                        <RadioGroup defaultValue="option-one" className='flex items-center gap-2'>
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="store-visitors" id="store-visitors" />
+                                <Label htmlFor="store-visitors">Website Visitors</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="video-views" id="video-views" />
+                                <Label htmlFor="video-views">Video Views</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="option-two" id="option-two" />
+                                <Label htmlFor="option-two">Post Reaction</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="messages" id="messages" />
+                                <Label htmlFor="messages">Messages</Label>
+                            </div>
+                        </RadioGroup>
+
+                    </div>
+                </div>
+            </CardContent>
+            </Card>
             <Card x-chunk="dashboard-07-chunk-0">
             <CardHeader>
                 <CardTitle>Campaign Details</CardTitle>
@@ -133,7 +162,7 @@ const CreateCampaignForm = () => {
                         <Label htmlFor="gender">Gender</Label>
                         <div className='flex items-center gap-2'>
                             <div className="flex items-center space-x-2">
-                                <Checkbox id="terms" />
+                                <Checkbox id="terms" className='size-6'/>
                                 <label
                                     htmlFor="terms"
                                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -142,7 +171,7 @@ const CreateCampaignForm = () => {
                                 </label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <Checkbox id="terms" />
+                                <Checkbox id="terms" className='size-6'/>
                                 <label
                                     htmlFor="terms"
                                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -167,74 +196,67 @@ const CreateCampaignForm = () => {
             <CardHeader>
                 <CardTitle>Campaign Format</CardTitle>
                 <CardDescription>
-                 Each Platform Has It's Format
+                 Each Platform Has A Format
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <div className="grid gap-6">
                     <div className="grid gap-3">
                         <Label htmlFor="platform">Select Format</Label>
-                        <Select>
-                            <SelectTrigger id="platform" aria-label="Select A Format For Your Campaign">
-                                <SelectValue placeholder="Select A Format For Your Campaign" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="youtube-short-video">Youtube Short Form Video</SelectItem>
-                                <SelectItem value="youtube-long-video">Youtube Long Form Video</SelectItem>
-                                <SelectItem value="instagram-reels-story">Instagram Story Reals</SelectItem>
-                                <SelectItem value="instagram-reels-feed">Instagram Feed Reals</SelectItem>
-                                <SelectItem value="instagram-story-pictures">Instagram Story Pictures</SelectItem>
-                                <SelectItem value="instagram-feed-pictures">Instagram Feed Pictures</SelectItem>
-                            </SelectContent>
-                        </Select>
+                        <ScrollArea className="h-40 w-full rounded-md border p-4">
+                        <RadioGroup defaultValue="option-one">
+                            {
+                                campaignFormat.map((format,key)=>(
+                                    <div className="flex items-center space-x-2" key={key}>
+                                      <RadioGroupItem value={format.value} id={format.value} />
+                                      <Label htmlFor={format.value}>{format.name}</Label>
+                                    </div>
+                                ))
+                            }
+                        </RadioGroup>
+                        </ScrollArea>
                     </div>
                 </div>
             </CardContent>
+            </Card>
+            <Card x-chunk="dashboard-07-chunk-5">
+                <CardHeader>
+                    <CardTitle>Upload Campaign</CardTitle>
+                    <CardDescription>
+                     Upload files appropriate to the platform you want your Advert published to
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <div></div>
+                    <CampaignUploadDrawer media={{value:'video'}}/>
+                </CardContent>
             </Card>
             <Card
             className="overflow-hidden" x-chunk="dashboard-07-chunk-4"
             >
             <CardHeader>
-                <CardTitle>Product Images</CardTitle>
+                <CardTitle>Preview</CardTitle>
                 <CardDescription>
                 Lipsum dolor sit amet, consectetur adipiscing elit
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <div className="grid gap-2">
-                <Image
-                    alt="Product image"
-                    className="aspect-square w-full rounded-md object-cover"
-                    height="300"
-                    src={IMG}
-                    width="300"
-                />
-                <div className="grid grid-cols-3 gap-2">
-                    <button>
-                    <Image
-                        alt="Product image"
-                        className="aspect-square w-full rounded-md object-cover"
-                        height="84"
-                        src={IMG}
-                        width="84"
-                    />
-                    </button>
-                    <button>
-                    <Image
-                        alt="Product image"
-                        className="aspect-square w-full rounded-md object-cover"
-                        height="84"
-                        src={IMG}
-                        width="84"
-                    />
-                    </button>
-                    <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
-                    <Upload className="h-4 w-4 text-muted-foreground" />
-                    <span className="sr-only">Upload</span>
-                    </button>
-                </div>
+                    <CampaignImagePreview/>
                 </div>
             </CardContent>
+            </Card>
+            <Card x-chunk="dashboard-07-chunk-5">
+                <CardHeader>
+                    <CardTitle>Campaign Budget</CardTitle>
+                    <CardDescription>
+                      Set A budget For Your Campaign
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <div></div>
+                    <CampaignBudgetSetter/>
+                </CardContent>
             </Card>
             <Card x-chunk="dashboard-07-chunk-5">
             <CardHeader>
@@ -256,7 +278,7 @@ const CreateCampaignForm = () => {
         <Button variant="outline" size="sm">
             Discard
         </Button>
-        <Button size="sm">Save Product</Button>
+        <Button size="sm">Publish Campaign</Button>
         </div>
   </div>
   )
