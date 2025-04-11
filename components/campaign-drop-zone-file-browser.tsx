@@ -28,6 +28,7 @@ export function DropzoneFileBrowser(props) {
       setFiles(acceptedFiles.map(file => Object.assign(file, {
         preview: URL.createObjectURL(file)
       })));
+      setVideoURL(URL.createObjectURL(acceptedFiles[0]));
     }
   });
   const acceptedFileItems = acceptedFiles.map(file => (

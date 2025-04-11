@@ -79,19 +79,19 @@ const CreateCampaignForm = () => {
                         <Label htmlFor="platform">Select Goal</Label>
                         <RadioGroup defaultValue="option-one" className='flex items-center gap-2'>
                             <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="store-visitors" id="store-visitors" />
+                                <RadioGroupItem value="store-visitors" id="store-visitors" className='size-6' />
                                 <Label htmlFor="store-visitors">Website Visitors</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="video-views" id="video-views" />
+                                <RadioGroupItem value="video-views" id="video-views" className='size-6'/>
                                 <Label htmlFor="video-views">Video Views</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="option-two" id="option-two" />
+                                <RadioGroupItem value="option-two" id="option-two" className='size-6'/>
                                 <Label htmlFor="option-two">Post Reaction</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="messages" id="messages" />
+                                <RadioGroupItem value="messages" id="messages" className='size-6'/>
                                 <Label htmlFor="messages">Messages</Label>
                             </div>
                         </RadioGroup>
@@ -208,7 +208,7 @@ const CreateCampaignForm = () => {
                             {
                                 campaignFormat.map((format,key)=>(
                                     <div className="flex items-center space-x-2" key={key}>
-                                      <RadioGroupItem value={format.value} id={format.value} />
+                                      <RadioGroupItem value={format.value} id={format.value} className='size-6'/>
                                       <Label htmlFor={format.value}>{format.name}</Label>
                                     </div>
                                 ))

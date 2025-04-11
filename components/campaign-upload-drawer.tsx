@@ -83,7 +83,7 @@ export function CampaignUploadDrawer(props) {
           </DrawerClose>
         </div>
         <div className="mx-auto w-full sm:max-w-[70%]">
-          <div className="px-4 py-1 pb-0">
+          <div className="md:px-4 py-1 pb-0">
             
             <div className="mt-3 h-[700px]">
               <ResponsiveContainer width="100%" height="100%">

@@ -2,21 +2,8 @@
 
 import * as React from "react"
 import { Minus, Plus } from "lucide-react"
-import { Bar, BarChart, ResponsiveContainer } from "recharts"
 
 import { Button } from "@/components/ui/button"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { DropzoneFileBrowser } from "./campaign-drop-zone-file-browser"
 
 const data = [
   {
