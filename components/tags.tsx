@@ -35,6 +35,8 @@ export default function Tags() {
         flexWrap: 'wrap',
         listStyle: 'none',
         background:'none',
+        border:'none',
+        boxShadow:'none',
         p: 0.5,
         m: 0,
       }}

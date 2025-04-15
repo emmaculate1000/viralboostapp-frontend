@@ -18,10 +18,10 @@ import {
   CommandShortcut,
 } from "@/components/ui/command"
 
-export function GoogleLocationSugession() {
+export function HashTagSugession() {
   return (
     <Command className="rounded-lg border shadow-md">
-      <CommandInput placeholder="Type location and search..." className="py-4"/>
+      <CommandInput placeholder="Type Hash tag and search..." className="py-4"/>
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">

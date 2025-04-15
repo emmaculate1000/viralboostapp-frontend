@@ -21,7 +21,7 @@ import {
   SidebarGroupContent
 } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
-
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
 export function NavMain({
   items,
@@ -45,9 +45,9 @@ export function NavMain({
             <Link href="/business-dashboard/manage-campaigns/create-campaign">
               <SidebarMenuButton
                 tooltip="Quick Create"
-                className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+                className="min-w-8 px-2 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
               >
-                <PlusCircleIcon />
+                <ArrowDropDownCircleIcon />
                 <span>Create Campaign</span>
               </SidebarMenuButton>
             </Link>

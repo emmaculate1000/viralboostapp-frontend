@@ -429,41 +429,247 @@ export const KPIs =[
 ];
 export const campaignFormat=[
   {
+    name:'Instagram Picture Post',
+    value:'instagram-picture-post',
+    tailored:'Your are permitted to publish 1 image in a single post tailored to instagram.',
+    metrics:[
+      {
+        name:'Instagram Reach',
+        value:'instagram-reach',
+        description:'Instagram Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Instagram Impressions',
+        value:'instagram-impressions',
+        description:"Instagram Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Instagram Engagement',
+        value:'instagram-engagements',
+        description:"Instagram Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Instagram Viws',
+        value:'instagram-views',
+        description:"Views measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Instagram Reals Post',
+    value:'instagram-reals-post',
+    tailored:'Your are permitted to publish 1 video in a single post tailored to instagram.',
+    metrics:[
+      {
+        name:'Instagram Reach',
+        value:'instagram-reach',
+        description:'Instagram Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Instagram Impressions',
+        value:'instagram-impressions',
+        description:"Instagram Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Instagram Engagement',
+        value:'instagram-engagements',
+        description:"Instagram Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Instagram Viws',
+        value:'instagram-views',
+        description:"Views measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Instagram Carousel - Slideshow',
+    value:'instagram-carousel-post',
+    tailored:'You can publish up to 10 images, videos, or a mix of the two in a single post tailored to instagram.',
+    metrics:[
+      {
+        name:'Instagram Reach',
+        value:'instagram-reach',
+        description:'Instagram Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Instagram Impressions',
+        value:'instagram-impressions',
+        description:"Instagram Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Instagram Engagement',
+        value:'instagram-engagements',
+        description:"Instagram Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Instagram Viws',
+        value:'instagram-views',
+        description:"Views measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Facebook Single Image Post',
+    value:'facebook-single-image-post',
+    tailored:'Your are permitted to publish 1 image in a single post tailored to Facebook.',
+    metrics:[
+      {
+        name:'Facebook Reach',
+        value:'facebook-reach',
+        description:'Facebook Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Facebook Impressions',
+        value:'facebook-impressions',
+        description:"Facebook Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Facebook Engagement',
+        value:'facebook-engagements',
+        description:"Facebook Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Facebook Viws',
+        value:'facebook-views',
+        description:"Facebook Views, measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Facebook Reals Video Post',
+    value:'facebook-reals-video-post',
+    tailored:'Your are permitted to publish 1 video which is not more than 90s in a single post tailored to Facebook.',
+    metrics:[
+      {
+        name:'Facebook Reach',
+        value:'facebook-reach',
+        description:'Facebook Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Facebook Impressions',
+        value:'facebook-impressions',
+        description:"Facebook Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Facebook Engagement',
+        value:'facebook-engagements',
+        description:"Facebook Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Facebook Viws',
+        value:'facebook-views',
+        description:"Facebook Views, measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Facebook Long Video Post',
+    value:'facebook-long-video-post',
+    tailored:'Your are permitted to publish 1 video which is more than 90s in a single post tailored to Facebook.',
+    metrics:[
+      {
+        name:'Facebook Reach',
+        value:'facebook-reach',
+        description:'Facebook Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Facebook Impressions',
+        value:'facebook-impressions',
+        description:"Facebook Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Facebook Engagement',
+        value:'facebook-engagements',
+        description:"Facebook Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Facebook Viws',
+        value:'facebook-views',
+        description:"Facebook Views, measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
+    name:'Facebook Carousel Post - Slideshow',
+    value:'facebook-carousel-post',
+    tailored:'Your are permitted to publish a minimum of 3 images and a maximum of 7 in a single post tailored to Facebook.',
+    metrics:[
+      {
+        name:'Facebook Reach',
+        value:'facebook-reach',
+        description:'Facebook Reach, measures the number of unique users who see your content.'
+      },
+      {
+        name:'Facebook Impressions',
+        value:'facebook-impressions',
+        description:"Facebook Impressions, measures the total number of times your content appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Facebook Engagement',
+        value:'facebook-engagements',
+        description:"Facebook Engagement measures various interactions users have with your content, including likes, comments, saves, shares, and direct messages."
+      },
+      {
+        name:'Facebook Viws',
+        value:'facebook-views',
+        description:"Facebook Views, measure how many times your content appears on screen, whether it's a Reel, Story, photo, carousel, or Live video."
+      }
+    ]
+  },
+  {
     name:'Youtube Short Form Video',
-    value:'youtube-short-video'
+    value:'youtube-short-video',
+    tailored:'',
+    metrics:[
+      {
+        name:'Youtube Reach',
+        value:'youtube-video-reach',
+        description:'Youtube video reach, measures the number of unique users who see your video.'
+      },
+      {
+        name:'Youtube Impressions',
+        value:'youtube-video-impressions',
+        description:"Youtube video impressions, measures the total number of times your video appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Youtube Video Engagement',
+        value:'youtube-video-engagements',
+        description:"Youtube video engagement measures various interactions users have with your video, including likes, comments, saves, and shares."
+      },
+      {
+        name:'Youtube Video Views',
+        value:'youtube-video-views',
+        description:"Youtube video views, measure how many times your video was played or viewed."
+      }
+    ]
   },
   {
     name:'Youtube Long Form Video',
-    value:'youtube-long-video'
+    value:'youtube-long-video',
+    tailored:'',
+    metrics:[
+      {
+        name:'Youtube Reach',
+        value:'youtube-video-reach',
+        description:'Youtube video reach, measures the number of unique users who see your video.'
+      },
+      {
+        name:'Youtube Impressions',
+        value:'youtube-video-impressions',
+        description:"Youtube video impressions, measures the total number of times your video appears on users' feeds, including repeated views from the same user."
+      },
+      {
+        name:'Youtube Video Engagement',
+        value:'youtube-video-engagements',
+        description:"Youtube video engagement measures various interactions users have with your video, including likes, comments, saves, and shares."
+      },
+      {
+        name:'Youtube Video Views',
+        value:'youtube-video-views',
+        description:"Youtube video views, measure how many times your video was played or viewed."
+      }
+    ]
   },
-  {
-    name:'Instagram Story Reals',
-    value:'instagram-reels-story'
-  },
-  {
-    name:'Instagram Feed Reals',
-    value:'instagram-reels-feed'
-  },
-  {
-    name:'Instagram Story Pictures',
-    value:'instagram-story-pictures'
-  },
-  {
-    name:'Instagram Feed Pictures',
-    value:'instagram-feed-pictures'
-  }
+ 
 ];
-export const previewImages=[
-  {
-    artist: "Ornella Binni",
-    art: "https://images.unsplash.com/photo-1465869185982-5a1a7522cbcb?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    artist: "Tom Byrom",
-    art: "https://images.unsplash.com/photo-1548516173-3cabfa4607e9?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    artist: "Vladimir Malyavko",
-    art: "https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80",
-  },
-]
