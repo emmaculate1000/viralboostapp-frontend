@@ -20,6 +20,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import { Contrast, Palette, Zap } from "lucide-react";
 
 export const GenderOptions = ["Male", "Female", "Other"];
 
@@ -427,9 +428,31 @@ export const KPIs =[
     KPIUnit:'$'
   }
 ];
-export const campaignFormat=[
+export const campaignGoals=[
   {
-    name:'Instagram Picture Post',
+    label:"Reach More People",
+    value:"platform-reach"
+  },
+  {
+    label:"Website Visitors",
+    value:"website-visitors"
+  },
+  {
+    label:"Generate Impressions",
+    value:"platform-impressions"
+  },
+  {
+    label:"Generate Engagements",
+    value:"platform-engagement"
+  },
+  {
+    label:"Generate Views",
+    value:"platform-views"
+  }
+];
+export const campaignFormats=[
+  {
+    label:'Instagram single picture post',
     value:'instagram-picture-post',
     tailored:'Your are permitted to publish 1 image in a single post tailored to instagram.',
     metrics:[
@@ -456,7 +479,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Instagram Reals Post',
+    label:'Instagram Reals video',
     value:'instagram-reals-post',
     tailored:'Your are permitted to publish 1 video in a single post tailored to instagram.',
     metrics:[
@@ -483,7 +506,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Instagram Carousel - Slideshow',
+    label:'Instagram Slideshow Post',
     value:'instagram-carousel-post',
     tailored:'You can publish up to 10 images, videos, or a mix of the two in a single post tailored to instagram.',
     metrics:[
@@ -510,7 +533,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Facebook Single Image Post',
+    label:'Facebook Single Picture Post',
     value:'facebook-single-image-post',
     tailored:'Your are permitted to publish 1 image in a single post tailored to Facebook.',
     metrics:[
@@ -537,7 +560,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Facebook Reals Video Post',
+    label:'Facebook Reals Video Post',
     value:'facebook-reals-video-post',
     tailored:'Your are permitted to publish 1 video which is not more than 90s in a single post tailored to Facebook.',
     metrics:[
@@ -564,7 +587,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Facebook Long Video Post',
+    label:'Facebook Long Video Post',
     value:'facebook-long-video-post',
     tailored:'Your are permitted to publish 1 video which is more than 90s in a single post tailored to Facebook.',
     metrics:[
@@ -591,7 +614,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Facebook Carousel Post - Slideshow',
+    label:'Facebook Slideshow Post',
     value:'facebook-carousel-post',
     tailored:'Your are permitted to publish a minimum of 3 images and a maximum of 7 in a single post tailored to Facebook.',
     metrics:[
@@ -618,7 +641,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Youtube Short Form Video',
+    label:'Youtube Short Form Video',
     value:'youtube-short-video',
     tailored:'',
     metrics:[
@@ -645,7 +668,7 @@ export const campaignFormat=[
     ]
   },
   {
-    name:'Youtube Long Form Video',
+    label:'Youtube Long Form Video',
     value:'youtube-long-video',
     tailored:'',
     metrics:[
@@ -672,4 +695,111 @@ export const campaignFormat=[
     ]
   },
  
+];
+export const niches = [
+  { id: "1", name: "Digital Marketing" },
+  { id: "2", name: "blue-500" },
+  { id: "3", name: "green-500" },
+  { id: "4", name: "yellow-500" },
+  { id: "5", name: "purple-500" },
+  { id: "6", name: "pink-500" },
+  { id: "7", name: "indigo-500" },
+  { id: "8", name: "gray-500" },
+  { id: "9", name: "orange-500" },
+  { id: "10", name: "teal-500" },
+  { id: "11", name: "cyan-500" },
+  { id: "12", name: "emerald-500" },
+  { id: "13", name: "violet-500" },
+  { id: "14", name: "fuchsia-500" },
+  { id: "15", name: "rose-500" },
+  { id: "16", name: "amber-500" },
+  { id: "17", name: "lime-500" },
+  { id: "18", name: "sky-500" },
+  { id: "19", name: "slate-500" },
+  { id: "20", name: "zinc-500" },
+];
+export const budgetGoals = [
+  {
+    goal: 400,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 278,
+  },
+  {
+    goal: 189,
+  },
+  {
+    goal: 239,
+  },
+  {
+    goal: 300,
+  },
+  {
+    goal: 200,
+  },
+  {
+    goal: 278,
+  },
+  {
+    goal: 189,
+  },
+  {
+    goal: 349,
+  },
+]
+export const keywords = [
+  { id: "1", name: "red-500" },
+  { id: "2", name: "blue-500" },
+  { id: "3", name: "green-500" },
+  { id: "4", name: "yellow-500" },
+  { id: "5", name: "purple-500" },
+  { id: "6", name: "pink-500" },
+  { id: "7", name: "indigo-500" },
+  { id: "8", name: "gray-500" },
+  { id: "9", name: "orange-500" },
+  { id: "10", name: "teal-500" },
+  { id: "11", name: "cyan-500" },
+  { id: "12", name: "emerald-500" },
+  { id: "13", name: "violet-500" },
+  { id: "14", name: "fuchsia-500" },
+  { id: "15", name: "rose-500" },
+  { id: "16", name: "amber-500" },
+  { id: "17", name: "lime-500" },
+  { id: "18", name: "sky-500" },
+  { id: "19", name: "slate-500" },
+  { id: "20", name: "zinc-500" },
+];
+export const selectedInfluencers = [
+  { id: "1", name: "Akem Ronalto Etchu"},
+  { id: "2", name: "blue-500" },
+  { id: "3", name: "green-500" },
+  { id: "4", name: "yellow-500" },
+  { id: "5", name: "purple-500" },
+  { id: "6", name: "pink-500" },
+  { id: "7", name: "indigo-500" },
+  { id: "8", name: "gray-500" },
+  { id: "9", name: "orange-500" },
+  { id: "10", name: "teal-500" },
+  { id: "11", name: "cyan-500" },
+  { id: "12", name: "emerald-500" },
+  { id: "13", name: "violet-500" },
+  { id: "14", name: "fuchsia-500" },
+  { id: "15", name: "rose-500" },
+  { id: "16", name: "amber-500" },
+  { id: "17", name: "lime-500" },
+  { id: "18", name: "sky-500" },
+  { id: "19", name: "slate-500" },
+  { id: "20", name: "zinc-500" },
 ];

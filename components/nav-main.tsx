@@ -45,7 +45,7 @@ export function NavMain({
             <Link href="/business-dashboard/manage-campaigns/create-campaign">
               <SidebarMenuButton
                 tooltip="Quick Create"
-                className="min-w-8 px-2 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+                className="min-w-8 px-2 bg-primary text-primary-foreground cursor-pointer duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
               >
                 <ArrowDropDownCircleIcon />
                 <span>Create Campaign</span>
@@ -53,7 +53,7 @@ export function NavMain({
             </Link>
             <Button
               size="icon"
-              className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"
+              className="h-9 cursor-pointer w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"
               variant="outline"
             >
               <MailIcon />

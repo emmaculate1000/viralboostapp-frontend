@@ -19,6 +19,7 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import { Button } from "@/components/ui/button";
 import CreateCampaignForm from "@/components/create-campaign-form"
 import AdjustIcon from '@mui/icons-material/Adjust';
+import CampaignSteps from "@/components/campaign-steps";
 
 // export const description =
 //   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
@@ -80,7 +81,8 @@ export default function EditCampaign() {
           </div>
         </header>
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-         <CreateCampaignForm/>
+         {/* <CreateCampaignForm/> */}
+         <CampaignSteps/>
         </main>
       </div>
   )

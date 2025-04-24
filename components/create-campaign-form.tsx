@@ -28,6 +28,13 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import Tags from '@/components/tags';
 import { campaignFormat } from '@/constants';
 import { CampaignUploadDrawer } from './campaign-upload-drawer';
@@ -86,27 +93,30 @@ const CreateCampaignForm = () => {
               <div className="grid auto-rows-max items-start gap-4 lg:col-span-2 lg:gap-8">
                 <Card x-chunk="dashboard-07-chunk-0">
                     <CardHeader>
-                        <CardTitle>Campaign Format</CardTitle>
+                        <CardTitle>Choose a platform</CardTitle>
                         <CardDescription>
-                        Each Platform Has A Format
+                          Where should promoters publish your campaign?
                         </CardDescription>
                     </CardHeader>
                   <CardContent>
                         <div className="grid gap-6 pb-4">
                             <div className="grid gap-3">
-                                <Label htmlFor="platform">Select Format</Label>
-                                <ScrollArea className="h-40 w-full rounded-md border p-4">
-                                    <RadioGroup onValueChange={(value)=>select_platform(value)} defaultValue={campaignFormat[0].value} className="flex flex-col space-y-1">
+                                <Select onValueChange={(value)=>select_platform(value)} defaultValue={campaignFormat[0].value}>
+                                    <SelectTrigger
+                                        id="category"
+                                        aria-label="Select platform"
+                                        className='w-full'
+                                    >
+                                        <SelectValue placeholder="Select platform" />
+                                    </SelectTrigger>
+                                    <SelectContent>
                                         {
                                             campaignFormat.map((format,key)=>(
-                                                <div className="flex items-center space-x-2" key={format.value}>
-                                                  <RadioGroupItem value={format.value} id={format.value} className='size-6'/>
-                                                   <Label htmlFor={format.value} className='text-base'>{format.name}</Label>
-                                                </div>
+                                                <SelectItem value={format.value}>{format.name}</SelectItem>
                                             ))
                                         }
-                                    </RadioGroup>
-                                </ScrollArea>
+                                    </SelectContent>
+                                </Select>
                             </div>
                         </div>
                         <CardDescription className='text-sm py-1.5 text-primary text-center'>
@@ -118,25 +128,28 @@ const CreateCampaignForm = () => {
                   <CardHeader>
                         <CardTitle>Campaign Goal</CardTitle>
                         <CardDescription>
-                        What is the goal of your campaign
+                          What metric will you measure on this campaign?
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
                         <div className="grid gap-6 pb-4">
                             <div className="grid gap-3">
-                                <Label htmlFor="platform">Select Goal</Label>
-                                <ScrollArea className="h-40 w-full rounded-md border p-4">
-                                    <RadioGroup onValueChange={(value)=>select_metric(value)} defaultValue="" className='flex flex-col space-y-1'>
+                               <Select onValueChange={(value)=>select_metric(value)}>
+                                    <SelectTrigger
+                                        id="category"
+                                        aria-label="Select goal"
+                                        className='w-full'
+                                    >
+                                        <SelectValue placeholder="Select goal" />
+                                    </SelectTrigger>
+                                    <SelectContent>
                                         {
                                             metrics.map((metric,index)=>(
-                                                <div className="flex items-center space-x-2" key={metric.value}>
-                                                  <RadioGroupItem value={metric.value} id={metric.value} className='size-6'  checked={selectedMetric.value==metric.value?true:false}/>
-                                                   <Label htmlFor={metric.value}>{metric.name}</Label>
-                                                </div>
+                                                <SelectItem value={metric.value}>{metric.name}</SelectItem>
                                             ))
                                         }
-                                    </RadioGroup>
-                                </ScrollArea>
+                                    </SelectContent>
+                                </Select>
 
                             </div>
                         </div>
@@ -177,11 +190,12 @@ const CreateCampaignForm = () => {
                         </div>
                     </CardContent>
                 </Card>
+                {/* =========================== */}
                 <Card x-chunk="dashboard-07-chunk-3">
                     <CardHeader>
                         <CardTitle>Hash Tags</CardTitle>
                         <CardDescription>
-                        Enter a maximum of 30 hash tags
+                          Enter a maximum of 30 hash tags
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -198,11 +212,11 @@ const CreateCampaignForm = () => {
                             <CardHeader>
                                 <CardTitle>Keywords - Tags</CardTitle>
                                 <CardDescription>
-                                Our A.I tool helps you generate SEO optimized keywords to help your content rank better
+                                   Our A.I tool helps you generate SEO optimized keywords to help your content rank better
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
-                            <Tags/>
+                               <Tags/>
                             </CardContent>
                             <CardFooter className="justify-center border-t p-2">
                                 <Button size="sm" className="gap-1 cursor-pointer">
@@ -214,13 +228,13 @@ const CreateCampaignForm = () => {
                     ):null
                 }
                 {/* set Campaign audience */}
-                <Card x-chunk="dashboard-07-chunk-4">
+                <Card x-chunk="dashboard-07-chunk-5">
                     <CardHeader>
                         <CardTitle>Campaign Audience</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="gap-3">
-                            <GoogleLocationSugession/>
+                            {/* <GoogleLocationSugession/> */}
                         </div>
                         <div className="grid gap-6 sm:grid-cols-3 my-4">
                             <div className="grid gap-3">
@@ -258,7 +272,7 @@ const CreateCampaignForm = () => {
                 </Card>
               </div>
               <div className="grid auto-rows-max items-start gap-4 lg:gap-8">
-                    <Card x-chunk="dashboard-07-chunk-5">
+                    <Card x-chunk="dashboard-07-chunk-6">
                         <CardHeader>
                             <CardTitle>Add Influencers</CardTitle>
                             <CardDescription>
@@ -270,7 +284,7 @@ const CreateCampaignForm = () => {
                             <AiCampaignInfluencerSuggestions/>
                         </CardContent>
                     </Card>
-                    <Card x-chunk="dashboard-07-chunk-5">
+                    <Card x-chunk="dashboard-07-chunk-7">
                         <CardHeader>
                             <CardTitle>Upload Campaign</CardTitle>
                             <CardDescription>
@@ -284,7 +298,7 @@ const CreateCampaignForm = () => {
                     </Card>
                     {/* campaigns that require posters */}
                     {selectedPlatform.value==campaignFormat[1].value||selectedPlatform.value==campaignFormat[campaignFormat.length-1].value?(
-                        <Card x-chunk="dashboard-07-chunk-6">
+                        <Card x-chunk="dashboard-07-chunk-8">
                         
                         <CardHeader>
                             <CardTitle>Video Poster</CardTitle>
@@ -300,7 +314,7 @@ const CreateCampaignForm = () => {
                     ):null}
                     
                     <Card
-                    className="overflow-hidden" x-chunk="dashboard-07-chunk-7"
+                    className="overflow-hidden" x-chunk="dashboard-07-chunk-9"
                     >
                         <CardHeader>
                             <CardTitle>Preview</CardTitle>
@@ -314,7 +328,7 @@ const CreateCampaignForm = () => {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card x-chunk="dashboard-07-chunk-8">
+                    <Card x-chunk="dashboard-07-chunk-10">
                         <CardHeader>
                             <CardTitle>Campaign Budget</CardTitle>
                             <CardDescription>
@@ -324,20 +338,6 @@ const CreateCampaignForm = () => {
                         <CardContent>
                             <div></div>
                             <CampaignBudgetSetter/>
-                        </CardContent>
-                    </Card>
-                    <Card x-chunk="dashboard-07-chunk-9">
-                        <CardHeader>
-                            <CardTitle>Archive Product</CardTitle>
-                            <CardDescription>
-                            Lipsum dolor sit amet, consectetur adipiscing elit.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <div></div>
-                            <Button size="sm" variant="secondary">
-                            Archive Product
-                            </Button>
                         </CardContent>
                     </Card>
                 </div>
